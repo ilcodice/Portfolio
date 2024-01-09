@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"],
+        input[type="email"]{
+            margin: px 0;
+            margin-bottom:20px ;   
+        }
+        input{
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        body{
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+       form{
+        border-style: dotted;
+        border-radius: 10px;
+        border-width: 2px;
+       }
+       select{
+          margin-bottom: 20px;
+       }
+       #name-email{
+        background-color: rgb(212, 228, 144);
+       }
+       #gender-country{
+        background-color: rgb(230, 212, 212);
+
+       }
+       #message-sub{
+        background-color: rgb(182, 207, 233);
+
+       }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form> 
+       <div pan id="name-email">
+
+            <Label for="first_name">First Name</Label>
+
+            <input 
+            type="text" 
+            name="first_name" 
+            placeholder="first name"
+            id="first_name" /> <br/>
+        
+            <Label for="last_name">Last Name</Label>
+            <input
+                type="text"
+                name="last_name"
+                placeholder="last name"
+                id="last_name" /> <br/>
+            
+            <Label for="email">Email</Label>
+        <input 
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email" /> <br/>
+       </div>
+
+       <div id="gender-country">
+                <label for="Gender">Gender</label>  <br/>
+                <input
+                    type="radio"
+                    name="gender"
+                    id="male"
+                    value="male" />
+                <Label for="Gender">Male</Label> 
+
+                
+                <input 
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="female" />   
+                <Label for="Gender">Female</Label> <br /><br/>
+            
+            
+            <Label for="Country">Country</Label><br/>
+            <select name="country" id="country">
+                <option>Select an Option</option>
+                <option value="usa">Usa</option>
+                <option value="Grm">Germany</option>
+                <option value="Fr">France</option>
+                <option value="Krd">Kurdistan</option>
+            </select> <br />
+       </div>
+
+       <div id="message-sub">
+            <label for="message">Message</label>
+            <textarea
+                name="message"
+                id="message"
+            ></textarea><br />
+
+            <input type="checkbox" name="newsletter" id="newsletter"/>
+            <label for="newsletter">Subscribe?</label><br/>
+       </div>
+
+        <input
+          type="submit" value="Submit" />
+
+
+    </form>
+
+    
+</body>
+</html>
+
