@@ -7,12 +7,27 @@
     <style>
       
         h1{
-            background-color: rgb(250, 242, 206);
+            background-color: rgb(205, 230, 241);
         }
         input[type="text"],
         input[type="email"]{
             margin: px 0;
             margin-bottom:20px ;   
+            transition: background-color 2s;
+        }
+        textarea {
+            width: 30%;
+            animation-name: text-area;
+            animation-duration: 4s;
+            transition: background-color 2s;
+        }
+
+        @keyframes text-area {
+            from{
+                width: 5%
+            }to {
+                width:30%
+            }
         }
         input{
             margin-top: 20px;
@@ -25,10 +40,12 @@
         }
        form{
             border-style: solid;
-            border-color: blue;
+            border-color: rgb(67, 134, 235);
             border-radius: 10px;
             border-width: 2px;
        }
+       
+
        select{
           margin-bottom: 20px;       }
        #name-email{
@@ -43,6 +60,39 @@
 
        }
        
+       input[type="text"]:hover,
+       input[type="email"]:hover,
+       textarea:hover {
+        background-color: azure;
+        
+       }
+       input[type="submit"]:hover{
+        font-size: large;
+
+       }
+       input[type="text"]:focus,
+       input[type="email"]:focus,
+       textarea:focus {
+        background-color: rgb(212, 229, 243);
+       }
+
+       input[type="submit"]:active{
+           font-size:xx-small;  
+       }
+
+       input[type="submit"] {
+           border: none;
+           color:rgb(255, 255, 255);
+           padding: 6px 32px;
+           cursor: pointer;
+           transition: font-size 1s;
+       }
+       .submit-disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+            background-image: linear-gradient(to right, rgb(162, 227, 247), rgb(193, 241, 184));
+       }
+
 
     </style>
 </head>
@@ -56,6 +106,7 @@
                 type="text" 
                 name="first_name" 
                 placeholder="first name"
+                onkeyup="activateSubmit()"
                 id="first_name" /> <br/>
         
             <Label for="last_name">Last Name</Label>
@@ -63,6 +114,7 @@
                 type="text"
                 name="last_name"
                 placeholder="last name"
+                onkeyup="activateSubmit()"
                 id="last_name" /> <br/>
             
             <Label for="email">Email</Label>
@@ -70,7 +122,9 @@
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Email" /> <br/>
+                placeholder="Email" 
+                onkeyup="activateSubmit()"/> <br/>
+                
        </div>
        
 
@@ -106,17 +160,18 @@
 
        <div id="message-sub">
             <label for="message">Message</label>
-            <textarea
+            <textarea 
                 name="message"
                 id="message"
+                rows="10"
             ></textarea><br />
 
             <input type="checkbox" name="newsletter" id="newsletter"/>
             <label for="newsletter">Subscribe?</label><br/>
        </div>
 
-        <input
-          type="submit" value="Submit" />
+        <input class="submit-disabled" id="submit"
+           type="submit" value="Submit" />
 
 
     </form>
