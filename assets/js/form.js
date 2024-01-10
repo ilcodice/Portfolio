@@ -42,3 +42,20 @@ function activateSubmit(){
         submitBtn.classList.add("submit-disabled")
     }
 }
+
+function countText() {
+    const textareaCnt = document.registration.message.value.length
+    const para = document.getElementById("text-count")
+    
+    if (textareaCnt == 100){
+        // change text color to green
+        para.style.color = "green"
+        
+    }  else {
+        // change the text color to red
+
+        para.style.color = "red"
+    }
+    para.textContent = textareaCnt + "/100"
+
+}

@@ -90,7 +90,11 @@
        .submit-disabled {
             cursor: not-allowed;
             pointer-events: none;
-            background-image: linear-gradient(to right, rgb(162, 227, 247), rgb(193, 241, 184));
+            background-image: linear-gradient(to right, rgb(98, 209, 243), rgb(193, 241, 184));
+       }
+       #text-count {
+        color: red;
+        margin-left:35%;
        }
 
 
@@ -164,7 +168,9 @@
                 name="message"
                 id="message"
                 rows="10"
+                onkeyup="countText()"
             ></textarea><br />
+            <p id="text-count">0/100</p>
 
             <input type="checkbox" name="newsletter" id="newsletter"/>
             <label for="newsletter">Subscribe?</label><br/>
