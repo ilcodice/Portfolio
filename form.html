@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+      
+        h1{
+            background-color: rgb(250, 242, 206);
+        }
         input[type="text"],
         input[type="email"]{
             margin: px 0;
@@ -20,43 +24,39 @@
             text-align: center;
         }
        form{
-        border-style: dotted;
-        border-radius: 10px;
-        border-width: 2px;
+            border-style: solid;
+            border-color: blue;
+            border-radius: 10px;
+            border-width: 2px;
        }
        select{
-          margin-bottom: 20px;
-       }
+          margin-bottom: 20px;       }
        #name-email{
-        background-color: rgb(212, 228, 144);
+        background-color: rgb(201, 215, 253);
        }
        #gender-country{
-        background-color: rgb(230, 212, 212);
+        background-color: rgb(184, 197, 233);
 
        }
        #message-sub{
-        background-color: rgb(182, 207, 233);
+        background-color: rgb(155, 173, 233);
 
        }
-
-        
+       
 
     </style>
 </head>
 <body>
 
-    <h1>Registration Form</h1>
-
-    <form> 
-       <div pan id="name-email">
-
+    <h1>registration Form</h1>
+    <form name="registration" onsubmit="return validation()"> 
+       <div id="name-email">
             <Label for="first_name">First Name</Label>
-
             <input 
-            type="text" 
-            name="first_name" 
-            placeholder="first name"
-            id="first_name" /> <br/>
+                type="text" 
+                name="first_name" 
+                placeholder="first name"
+                id="first_name" /> <br/>
         
             <Label for="last_name">Last Name</Label>
             <input
@@ -66,12 +66,13 @@
                 id="last_name" /> <br/>
             
             <Label for="email">Email</Label>
-        <input 
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email" /> <br/>
+            <input 
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email" /> <br/>
        </div>
+       
 
        <div id="gender-country">
                 <label for="Gender">Gender</label>  <br/>
@@ -101,6 +102,8 @@
             </select> <br />
        </div>
 
+       
+
        <div id="message-sub">
             <label for="message">Message</label>
             <textarea
@@ -118,7 +121,8 @@
 
     </form>
 
-    
+    <script type="text/javascript" src="assets/js/form.js"></script>
 </body>
 </html>
+
 
