@@ -1,55 +1,149 @@
-<!DOCTYPE html> 
-<html>
-    <head>
-        <title>Delo Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/home.css">
-        <style>
-           #dci{
-               text-decorat: none;
-           }
-           body {
-             background-color: rgb(233, 238, 236);
-             font-family: 'Courier New', Courier, monospace;
-             width: 70%;
-             margin: 0 auto;
-             text-align: center;
-           }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/home.css" />
+  </head>
+  <body>
 
-           h1 {
-            color:rgb(80, 142, 201);
-            text-align: center;
-            font-size: 50px;
-            
-           }
+    <h2>Delshad Ibrahim</h2>
+    <h3 id="full">Fullstack Developer</h3>
 
 
-        </style>
-    </head>
-    <!--where the containt begin-->
-    <body>
-        <!--Heading 1-->
-        <h1> About Me</h1>
-        <img width= "500" alt="Delshad" src="assets/images/Delshad.jpg"/>
-       
-        <!--Paragraph-->
-        
-        <p>I am new in  <span style="color:red">programming</span> with basic knowledge</p>
-        <p>I am currently a student at <a id="dci" href="https://digitalcareerinstitute.org/">DCI</a></p>
-        <h3>Skills</h3>
-        <ul id="skills-list">
-            <li>Driving</li>
-            <li>drawing</li>
-            <li>football</li>
+    <div class="container">
+      <img src="assets/images/delo.jpg" alt="delo's photo" />
+        <div class="me">
+            <div class="my_info">
+                <h3>About Me</h3>
+                <p>
+                    I am a full-stack developer specialized in Python, Django, SQL,
+                    PostgreSQL, and RESTful APIs. <br />Currently, I am learning HTML,
+                    CSS, JavaScript, Node.js, and React.
+                </p>
+            </div>
 
+            <div class="contact">
+                <h3>Contact</h3>
+                <div class="contact_child">
+                    <div class="contact-left">
+                        <p>Mobile: 015901605307</p>
+                        <p>email: d.delshadseyda@gmail.com</p>
+                    </div>
+
+                    <div class="contact_right">
+                        <p>Linkedin: <a href="https://www.linkedin.com/in/delshad-ibrahim-delo/" target="_blank">click me</a></p>
+                        <p>GitHub: <a href="https://github.com/ilcodice" target="_blank">click me</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="delo">
+      <div class="left">
+        <div class="edu">
+          <h3>Education</h3>
+          <ul>
+            <li>
+                <strong>Python Backend Course:</strong> Nov-2023 - Dec-2024
+                <p>By DCI (Digital Career Institute)</p>
+            </li>
+            <li>
+                <strong>Frontend Bootcamp:</strong> Feb-2025
+                <p>By Code Labs Academy</p>
+            </li>
         </ul>
-        <hr />
-        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAflBMVEX///8bOcoAKMgAGsb7/P6TmuCcpeQUNsqYoeLb3/UHLsg/VNHW2fNEWdENMckXN8nHzvDz9f1hcdagqeU0S87o6/lpeNi6wOtHVc+xuOnN0vEgPcwAI8bDyO7t7/rg4/YoQ8xyf9oAEMWHkt55htxYaNQAAMSrs+lLX9NTY9MTJCb0AAAElUlEQVR4nO2ca3eqOhBAIYApAZOiAkVQscBB//8fvLW8BhSvpy4PTNfsj7TIbEPeEzWNIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIIh/h+fbtttie1PH83PcMguK00eLc3anDumHeNEq1ZWEsHQ7dVQ/wlynTHKldIjcoJRxnT9SvwKnTCRZfO2CU6Y0bhQLUpmdwW+6YJRx0xEXhDLeUapfIxPFYwWDT2YfiKGD4jUCm0w4qDHS+GR6XMGRyZgZgzVGJanl7r0Wc+r4/gq7YLBYeIYr/D47+JZJHk0dz1OU4C3jMpw6nKcwraQrGONt6nCeY593MnJzmDqc5zisuvrPLMST5At20XaZSu6mjuZJ7JPo3jKsE/4G12lnMsKxp47mSbZAZoldxiWZmUIyc2WWMqY3inlvUP+wDHzAq2cJZbEaIzhmi8gdCeBhmaj7wHP0YhvLkONwrmInuxnqwzIL0X7c59urZeB8cYhSinOWnN+v73tchrfzHmNSmVpJGMerMT5WmctqhbMbxIFX5mvKIgeVF7OMLpP+kgVqGV2K3hQMt4wuenMw5DI6W4FYZi+TGJBEDDYslFzgkeG5BcgChxl9H/nhY5FRbLByb/rRWcA9S8Wt9o+zl7kxagkduAkjlm0bgFFG886gUnF93VxHKaN5G1A2ImhqDU4ZbQdaAblpek6kMuaxWyL/ap3reJDKaO+gaNixfs+wyuy7NfKvrqZuz7DKeJbRynBeVxqsMtrO6N6zpKyuoZWxnW4vNqk3ltDK+AHYJcv339fQynhZ1ziLomrO0MqYb10LIOudJbQyWgSbs6ptxisTgjFAUk0U8MrA4ZlR/RdiGQ5kqswSxDI6J5kLJPND/l6mGmkiluG/qTXrmmaV/KJOE/8IoARjsxT52MwDA01xqnYE0crAFEYWIJ8C+GBFI8mQzzRd0M0k6yogrDImmM4oVmcwY5Xxelm/9b4HVpnDptukEas6vcFeyk7wXsLpzGSiBCzP1vVfs89to8D5aAelzU3G68LWuWqyAXpJ2us7Qc5LpgRJ/2LZbBX6x05GLv2bd34zKxkvBtuaIm8S5eECtG6U4w+YlQzYndF53EVdgpok+XgTMCcZMCy7DMy6RjiEZwGlPnpOYz4yXgY2AHpb5/Bkw0XzcyxlcS4y3nbVOyQnHfD9e1kvUYUbRXjY18Dc0qlkQh9wcMNc78WrRAbvHJ45ZUl6WgU1eVuJpko3KQLAOU2SwUFMp1cxDsXw0KkUrCIx4raUp0oEamL5RgwPLis2OPG31h85DjzPFC0jH4TiXxUNGpnkYz+8F65AoZIR4sY4/+0TpQwTN/v47A8+GcWckfGKZdx81eYro6QMRkcr4Ubc0JmpjOKCLxd3DpXa+UZe+Uwlk6hxuGQsLaz/Oez7np1T+dUvSc55fSP4pYaFbH6+Qb3+lMb4kRMVb05BFt2ZeDUcQisvPjZpnF7/UsMiThvY4sUy74v1KNFu6z/6eM/e7sKooey+AjtsiV590ta8w4sfTRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEgYn/AF+LdWG2/ww0AAAAAElFTkSuQmCC"/>
-        <br />
-        <a href="https://github.com/Eyongkevin">GitHub</a>, <a href="https://www.linkedin.com/in/eyong-enowanyo/">LinkedIn</a>
+        
+        </div>
+
+        <div class="tech_skills">
+          <h3>Technical Skills</h3>
+          <div class="skills_icons">
+            <div class="skills_icons_up">
+              <img src="./assets/images/Python.png" alt="python_icon" />
+              <img src="./assets/images/PostgresSQL.png"alt="postgresql_icon"/>
+              <img src="./assets/images/database.png" alt="sql-icon" />
+              <img src="./assets/images/django_rest_framework.jpg"alt="django_rest"/>
+              <img src="./assets/images/rest-api1.png" alt="rest_api_icon" />
+              <img src="./assets/images/Postman.png" alt="postman_icon" />
+            </div>
+            <div class="skills_icons_down">
+              <img src="./assets/images/HTML5.png" alt="html_icon" />
+              <img src="./assets/images/CSS3.png" alt="css_icon" />
+              <img src="./assets/images/JavaScript.png" alt="javascript_icon" />
+              <img src="./assets/images/React.png" alt="react_icon" />
+              <img src="./assets/images/github.jpg" alt="github_icon" />
+              <img src="./assets/images/Git.png" alt="git_icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+
+        <div class="soft_skills">
+          <h3>Soft skills</h3>
+          <ul>
+            <li id="soft_skills_elements">Scrum Master</li> <!-- give this id so i can give padding-bottom-->
+            <li id="soft_skills_elements">Teamwork</li>
+            <li id="soft_skills_elements">Problem-solving</li>
+            <li id="soft_skills_elements">Communication</li>
+            <li id="soft_skills_elements">Adaptability</li>
+            <li id="soft_skills_elements">Time management</li>
+          </ul>
+
+        </div>
+
+        <div class="lang">
+          <h3>Languages</h3>
+          <ul>
+            <li id="lang_element">German</li>
+            <li id="lang_element">English</li>
+            <li id="lang_element">Kurdish</li>
+            <li id="lang_element">Arabic</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
 
-    </body>
+    <div class="last_section">
 
+        <h3 id="projects">Projects</h3>
+        <div class="projects">
+            <div class="pro1">
+                <h4 id="project_heading">Amazon Simulation</h4>
+                <p>A small project built with Python, where users can
+                register, log in, and make purchases.</p>
+            </div>
 
+            <div class="pro2">
+                <h4 id="project_heading">Family Disease History</h4>
+                <p>
+                A project developed with Django that allows
+                users to save their health history, record doctor appointments, track
+                medications, view disease history, surgeries, and allergies. Users can
+                also upload documents such as blood test results and store them
+                securely.
+                </p>
+            </div>
 
- </html>
+            <div class="pro3">
+                <h4 id="project_heading">School Prep Genie</h4>
+                <p>
+                A project developed by a team of five: two
+                frontend developers, two backend developers, and one Scrum Master. I
+                worked as a backend developer. This project is designed for children
+                and parents to track school activities. Teachers can upload homework,
+                make announcements, contact parents, update the daily lunch menu, and
+                manage the school calendar. Parents can communicate directly with
+                teachers, check the lunch menu, and view holiday schedules.
+                </p>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>

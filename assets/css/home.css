@@ -1,7 +1,202 @@
-#dci{
-    color: green;
-    text-decoration: none;
+body{
+    margin:0;
+    padding: 0;
+    background-color: hsl(0, 0%, 8%);
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+h2{
+    color:white;
+    font-family: Arial, sans-serif;
 }
-#skills-list{
-    list-style-type:none;
+
+
+
+#full{
+    color:#e59f09;
 }
+
+
+.container{
+    display: flex;
+    gap: 130px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 1200px;
+}
+
+
+.my_info{
+    background-color: hsl(0, 0%, 12%);
+    padding:10px 30px 10px 30px;
+    margin-bottom: 30px;
+    width: 758px;
+}
+
+
+.contact {
+    background-color: hsl(0, 0%, 12%);
+    padding:10px 30px 10px 30px;
+
+}
+.contact_child{
+    display: flex;
+    gap: 100px;
+}
+
+img{
+    width:300px;
+    height: 325px;
+    border-radius: 10px;
+
+
+}
+
+
+h3{
+    color: #e50913;
+    color:rgb(23, 186, 137);
+}
+
+h4{
+    color: white;
+}    
+
+p{
+    font-size: 16px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif
+
+}
+
+a{
+    color:rgb(59, 168, 135)
+}
+
+
+.delo {
+    display: flex;
+    border-radius: 5px;
+    background-color:hsl(0, 0%, 12%);
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 200px;
+    width: 1200px;
+}
+
+.edu{
+    padding-bottom: 20px;
+}
+
+.skills_icons img{
+    width: 50px;
+    height: 50px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    margin-left: 15px;
+}
+
+
+ul li {
+    color: white;
+}
+
+.lang{
+    margin-top: 35px;
+
+}
+
+#soft_skills_elements{
+    padding-bottom: 5px;
+}
+
+#lang_element{
+    padding-bottom: 10px;
+}
+
+#projects{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.last_section{
+    height: 450px;
+    padding-top: 30px;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 12%);
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+
+}
+.projects{
+    display:flex;
+    gap: 50px;
+    justify-content: center;
+    width: 1230px; 
+
+}
+
+#projects{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 26px;
+ 
+}
+#project_heading{
+    color:#DE3C4B;
+    font-size: 18px;
+}
+
+.pro1{
+    width: 300px;
+    height: 320px;
+    border:1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 12%);
+    padding:10px 15px 10px 20px;
+
+
+}
+
+.pro2{
+    width: 300px;
+    height: 320px;
+    border:1px solid hsl(0, 0%, 100%);
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 12%);
+    padding:10px 15px 10px 20px;
+
+
+}
+
+.pro3{
+    width: 300px;
+    height: 320px;
+    border:1px solid hsl(0, 0%, 100%);
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 12%);
+    padding:10px 15px 10px 20px;
+
+
+}
+
+.pro1, .pro2, .pro3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.pro1:hover, .pro2:hover, .pro3:hover {
+    transform: scale(1.09); /* Slightly enlarges the element */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Adds a glowing effect */
+    background-color: hsl(0, 0%, 15%); /* Slightly changes background color */
+}
+
+
