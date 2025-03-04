@@ -47,6 +47,7 @@ a{
     justify-content: center;
 }
 
+
 .my_info, .contact {
     background-color: hsl(0, 0%, 15%);
     padding: 20px 30px;
@@ -56,6 +57,9 @@ a{
     border-radius: 10px;
 }
 
+.my_info{
+    padding-bottom: 34px;
+}
 .contact_child {
     display: flex;
     gap: 30px; /* Adjusted for better spacing */
@@ -66,7 +70,7 @@ a{
 img {
     width: 100%; /* Makes images responsive */
     max-width: 300px;
-    height: auto;
+    height: 380px;
     border-radius: 10px;
 
 }
