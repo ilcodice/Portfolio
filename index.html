@@ -94,84 +94,84 @@
             </div>
 
             <p class="text-red-400 text-md uppercase tracking-wider mb-2">Full-stack projects</p>
-            <div class="w-[200px] h-[1px] bg-red-500 mt-4"></div>
+            <div class="w-[400px] h-[1px] bg-red-500 mt-4"></div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Git Version Control -->
                 <!-- Converted slide-in-left animation and card styling to Tailwind -->
 
 
-                <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 -translate-x-24 animate-slide-in-left">
-                    <div class="w-70 flex items-center justify-center mb-6">
-                        <video class="w-auto h-48 object-cover rounded-lg" controls>
-                            <source src="assets/videos/quiz_space.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 mt-6">Quiz-Space</h3>
-                    <div>
-                        <p class="text-red-400">
-                            Quiz-App is a single-player game app where users can sign up and create 10-question quizzes for others to play.
-                        </p>
-                        <br>
-                        <p class="text-gray-400"><strong class="text-red-500">Gameplay:</strong> Players earn 10 points for each correct answer.</p>
-                        <p class="text-gray-400"><strong class="text-red-500">Upcoming Features:</strong> Select a category (e.g., sports, geography, science) and difficulty (easy, medium, hard), with AI generating quizzes based on these choices.</p>
-                    </div>
-
-                    <div class="w-[150px] h-[1px] bg-red-500 mt-4"></div>
-
-                    <div class="mt-4">
-                        <span class="text-red-500">Tech</span>
-                        <p>Next.js, TypeScript, Tailwind CSS, MongoDB, Node.js, Express.js, JWT</p>
-                    </div>
-
+                <!-- QUIZ SPACE CARD -->
+            <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 -translate-x-24 animate-slide-in-left relative z-30">
+                <div class="w-70 flex items-center justify-center mb-6 relative overflow-visible">
+                    <video 
+                        class="w-auto h-48 object-cover rounded-lg transform transition-transform duration-300 hover:scale-[2] hover:translate-x-10 hover:z-50 cursor-pointer" 
+                        controls>
+                        <source src="assets/videos/quiz_space.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-                
-                <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 -translate-x-24 animate-slide-in-left">
+                <h3 class="text-xl font-semibold mb-4 mt-6">Quiz-Space</h3>
+                <div>
+                    <p class="text-red-400">
+                        Quiz-App is a single-player game app where users can sign up and create 10-question quizzes for others to play.
+                    </p>
+                    <br>
+                    <p class="text-gray-400"><strong class="text-red-500">Gameplay:</strong> Players earn 10 points for each correct answer.</p>
+                    <p class="text-gray-400"><strong class="text-red-500">Upcoming Features:</strong> Select a category (e.g., sports, geography, science) and difficulty (easy, medium, hard), with AI generating quizzes based on these choices.</p>
+                </div>
+                <div class="w-[150px] h-[1px] bg-red-500 mt-4"></div>
+                <div class="mt-4">
+                    <span class="text-red-500">Tech</span>
+                    <p class="text-gray-400">Next.js, TypeScript, Tailwind CSS, MongoDB, Node.js, Express.js, JWT</p>
+                </div>
+                <div class="w-[150px] h-[1px] bg-red-500 mt-4"></div>
+                <div class="mt-4">
+                    <span class="text-red-500">Developed by</span>
+                    <p class="text-gray-400">Delshad Ibrahim</p>
+                </div>
+            </div>
 
-                    <!-- Group container -->
-
-                        <div class="relative grid grid-cols-3 gap-4">
-                            <div class="relative overflow-visible">
-                                <img src="assets/images/SPG-HomeScreen.png"
-                                     class="w-48 h-auto object-cover rounded-lg transform transition-transform duration-300 hover:scale-[3] hover:absolute hover:top-0 hover:left-0 hover:z-50 cursor-pointer">
-                            </div>
-                            <div class="relative overflow-visible">
-                                <img src="assets/images/SPG-SelectRole.png"
-                                     class="w-48 h-auto object-cover rounded-lg transform transition-transform duration-300 hover:scale-[3] hover:absolute hover:top-0 hover:left-0 hover:z-50 cursor-pointer">
-                            </div>
-                            <div class="relative overflow-visible">
-                                <img src="assets/images/SPG-About.png"
-                                     class="w-48 h-auto object-cover rounded-lg transform transition-transform duration-300 hover:scale-[3] hover:absolute hover:top-0 hover:left-0 hover:z-50 cursor-pointer">
-                            </div>
-                        </div>
-   
-                    
-                
-                    <h3 class="text-xl font-semibold mb-4 mt-6">School_Prep_Genie</h3>
-                    <div>
-                        <p class="text-red-400">
-                            School-Prep-Ginie is an all-in-one app that simplifies school communication and organization for teachers, parents, and students.
-                        </p>
-                        <br>
-                        <p class="text-gray-400"><strong class="text-red-500">Teachers:</strong> Assign homework, send notifications, and stay connected with parents.</p>
-                        <p class="text-gray-400"><strong class="text-red-500">Parents:</strong> Track homework, see required books, view the lunch menu, and get teacher updates.</p>
-                        <p class="text-gray-400"><strong class="text-red-500">Students:</strong> Manage homework, check holidays, and receive teacher notifications.</p>
+            <!-- SCHOOL PREP GENIE CARD -->
+            <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 -translate-x-24 animate-slide-in-left relative z-20">
+                <!-- Group container -->
+                <div class="relative grid grid-cols-3 gap-4">
+                    <div class="relative overflow-visible">
+                        <img src="assets/images/SPG-HomeScreen.png"
+                            class="w-48 h-auto object-cover rounded-lg transform transition-transform duration-300 hover:scale-[3] hover:absolute hover:top-0 hover:left-0 hover:z-50 cursor-pointer">
                     </div>
-                
-                    <div class="w-[150px] h-[1px] bg-red-500 mt-4"></div>
-                
-                    <div class="mt-4">
-                        <span class="text-red-500">Tech</span>
-                        <p>Django, Python, PostgreSQL, RestAPI, Swift</p>
+                    <div class="relative overflow-visible">
+                        <img src="assets/images/SPG-SelectRole.png"
+                            class="w-48 h-auto object-cover rounded-lg transform transition-transform duration-300 hover:scale-[3] hover:absolute hover:top-0 hover:left-0 hover:z-50 cursor-pointer">
+                    </div>
+                    <div class="relative overflow-visible">
+                        <img src="assets/images/SPG-About.png"
+                            class="w-48 h-auto object-cover rounded-lg transform transition-transform duration-300 hover:scale-[3] hover:absolute hover:top-0 hover:left-0 hover:z-50 cursor-pointer">
                     </div>
                 </div>
-                
-                
-                
-                
+                <h3 class="text-xl font-semibold mb-4 mt-6">School_Prep_Genie</h3>
+                <div>
+                    <p class="text-red-400">
+                        School-Prep-Ginie is an all-in-one app that simplifies school communication and organization for teachers, parents, and students.
+                    </p>
+                    <br>
+                    <p class="text-gray-400"><strong class="text-red-500">Teachers:</strong> Assign homework, send notifications, and stay connected with parents.</p>
+                    <p class="text-gray-400"><strong class="text-red-500">Parents:</strong> Track homework, see required books, view the lunch menu, and get teacher updates.</p>
+                    <p class="text-gray-400"><strong class="text-red-500">Students:</strong> Manage homework, check holidays, and receive teacher notifications.</p>
+                </div>
+                <div class="w-[150px] h-[1px] bg-red-500 mt-4"></div>
+                <div class="mt-4">
+                    <span class="text-red-500">Tech</span>
+                    <p class="text-gray-400">Django, Python, PostgreSQL, RestAPI, Swift</p>
+                </div>
+                <div class="w-[150px] h-[1px] bg-red-500 mt-4"></div>
+                <div class="mt-4">
+                    <span class="text-red-500">Developed by</span>
+                    <p class="text-gray-400">Group</p>
+                </div>
+            </div>
 
+            
                 <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 translate-x-24 animate-slide-in-right">
                     <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -183,151 +183,157 @@
                         Family Medical History is an app that helps users track their personal medical records. It allows storing doctor appointments (with doctor details, address, and time), operations (place, cost, doctor), medications (type, dosage, schedule), and allergy information for better health management.                    </p>
                 </div>
             </div>
-            <p class="text-red-400 mt-12 text-md uppercase tracking-wider mb-2">Backend Projects</p>
-            <div class="w-[170px] h-[1px] bg-red-500 mt-4"></div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Git Version Control -->
-                <!-- Converted slide-in-left animation and card styling to Tailwind -->
-                
-                <!-- My Read App -->
-                <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 -translate-x-24 animate-slide-in-left">
-                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
-                        </svg>
+
+            <div>
+
+                <p class="text-red-400 mt-12 text-md uppercase tracking-wider mb-2">Backend Projects</p>
+                <div class="w-[400px] h-[1px] bg-red-500 mt-4"></div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Git Version Control -->
+                    <!-- Converted slide-in-left animation and card styling to Tailwind -->
+                    
+                    <!-- My Read App -->
+                    <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 -translate-x-24 animate-slide-in-left">
+                        <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">My-Read-App</h3>
+                        <p class="text-gray-400">
+                            My Read App is a command-line application designed to track readers and their engagement with ebooks. The database manages reader information and provides insights such as total books, books per category, reading status, and reader progress.                    </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">My-Read-App</h3>
-                    <p class="text-gray-400">
-                        My Read App is a command-line application designed to track readers and their engagement with ebooks. The database manages reader information and provides insights such as total books, books per category, reading status, and reader progress.                    </p>
-                </div>
-                <!-- Freelancing -->
-                <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 translate-x-24 animate-slide-in-right">
-                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                    <!-- Freelancing -->
+                    <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 translate-x-24 animate-slide-in-right">
+                        <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Freelancing</h3>
+                        <p class="text-gray-400">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Freelancing</h3>
-                    <p class="text-gray-400">
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                    </p>
                 </div>
             </div>
+
         </div>
     </section>
 
-
-    <section id="skills" class="py-20 px-6 bg-slate-700/20 lg:px-20">
+    <section id="skills" class="py-10 md:py-20 px-4 md:px-6 bg-slate-700/20 lg:px-20">
         <!-- Converted slide-in-right animation to Tailwind classes -->
         <div class="max-w-6xl opacity-0 translate-x-24 animate-slide-in-right">
-            <div class="mb-12">
-                <h2 class="text-4xl lg:text-5xl font-bold text-red-400">Skill-Set</h2>
-                <div class="w-20 h-1 bg-red-500 mt-4"></div>
+            <div class="mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold text-red-400">Skill-Set</h2>
+                <div class="w-16 md:w-20 h-1 bg-red-500 mt-4"></div>
             </div>
             
-            <!-- Replaced grid layout with circular tech wheel -->
-            <div class="relative flex items-center justify-center min-h-[600px]">
-                <!-- Made connecting lines more visible with brighter color and thicker stroke -->
+            <!-- Made the container fully responsive with proper scaling -->
+            <div class="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] w-full">
+                <!-- Made SVG lines responsive with CSS custom properties -->
                 <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 1;">
                     <!-- Lines to each tech position -->
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(0deg))" y2="calc(50% + 240px * sin(0deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(30deg))" y2="calc(50% + 240px * sin(30deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(60deg))" y2="calc(50% + 240px * sin(60deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(90deg))" y2="calc(50% + 240px * sin(90deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(120deg))" y2="calc(50% + 240px * sin(120deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(150deg))" y2="calc(50% + 240px * sin(150deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(180deg))" y2="calc(50% + 240px * sin(180deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(210deg))" y2="calc(50% + 240px * sin(210deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(240deg))" y2="calc(50% + 240px * sin(240deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(270deg))" y2="calc(50% + 240px * sin(270deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(300deg))" y2="calc(50% + 240px * sin(300deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
-                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(330deg))" y2="calc(50% + 240px * sin(330deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(0deg))"   y2="calc(50% + 100px * sin(0deg))"   stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(30deg))"  y2="calc(50% + 100px * sin(30deg))"  stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(60deg))"  y2="calc(50% + 100px * sin(60deg))"  stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(90deg))"  y2="calc(50% + 100px * sin(90deg))"  stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(120deg))" y2="calc(50% + 100px * sin(120deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(150deg))" y2="calc(50% + 100px * sin(150deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(180deg))" y2="calc(50% + 100px * sin(180deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(210deg))" y2="calc(50% + 100px * sin(210deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(240deg))" y2="calc(50% + 100px * sin(240deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(270deg))" y2="calc(50% + 100px * sin(270deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(300deg))" y2="calc(50% + 100px * sin(300deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 100px * cos(330deg))" y2="calc(50% + 100px * sin(330deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    
                 </svg>
-
-                <!-- Central Hub -->
-                <div class="absolute z-10 w-32 h-32 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center shadow-2xl shadow-red-500/50">
+    
+                <!-- Made central hub responsive -->
+                <div class="absolute z-10 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center shadow-2xl shadow-red-500/50">
                     <div class="text-white text-center">
-                        <div class="text-2xl font-bold">Skills</div>
+                        <div class="text-sm sm:text-lg md:text-2xl font-bold">Skills</div>
                     </div>
                 </div>
-
-                <!-- Orbiting Skills Container -->
-                <div class="tech-orbit relative w-[600px] h-[600px]">
-                    <!-- Made tech items bigger (w-28 h-28) and icons much bigger (w-16 h-16) -->
+    
+                <!-- Made orbiting skills container fully responsive -->
+                <div class="tech-orbit relative w-full h-full max-w-[350px] max-h-[350px] sm:max-w-[450px] sm:max-h-[450px] md:max-w-[600px] md:max-h-[600px]">
+                    <!-- Made tech items responsive with smaller sizes on mobile -->
                     <!-- JavaScript -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/30 cursor-pointer" style="--angle: 0deg;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" alt="JS Logo" class="w-16 h-16 rounded"/>
-                        <span class="text-xs text-white mt-1 font-medium">JS</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center " style="--angle: 0deg;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" alt="JS Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 rounded"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">JS</span>
                     </div>
-
+    
                     <!-- React -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 cursor-pointer" style="--angle: 30deg;">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s" alt="React Logo" class="w-16 h-16 rounded"/>
-                        <span class="text-xs text-white mt-1 font-medium">React</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center " style="--angle: 30deg;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s" alt="React Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 rounded"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">React</span>
                     </div>
-
+    
                     <!-- Next.js -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/30 cursor-pointer" style="--angle: 60deg;">
-                        <img src="https://www.svgrepo.com/show/354113/nextjs-icon.svg" alt="Next.js Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Next</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 60deg;">
+                        <img src="https://www.svgrepo.com/show/354113/nextjs-icon.svg" alt="Next.js Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Next</span>
                     </div>
-
+    
                     <!-- NestJS -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/30 cursor-pointer" style="--angle: 90deg;">
-                        <img src="https://res.cloudinary.com/teepublic/image/private/s--DR_n9O6y--/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1699843204/production/designs/53097336_0.jpg" alt="NestJS Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Nest</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 90deg;">
+                        <img src="https://res.cloudinary.com/teepublic/image/private/s--DR_n9O6y--/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1699843204/production/designs/53097336_0.jpg" alt="NestJS Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Nest</span>
                     </div>
-
+    
                     <!-- Tailwind CSS -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/30 cursor-pointer" style="--angle: 120deg;">
-                        <img src="https://www.svgrepo.com/show/374118/tailwind.svg" alt="Tailwind CSS Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Tail</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 120deg;">
+                        <img src="https://www.svgrepo.com/show/374118/tailwind.svg" alt="Tailwind CSS Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Tail</span>
                     </div>
-
+    
                     <!-- Express.js -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 cursor-pointer" style="--angle: 150deg;">
-                        <img src="https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png" alt="Express.js Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Expr</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 150deg;">
+                        <img src="https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png" alt="Express.js Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Expr</span>
                     </div>
-
+    
                     <!-- Postman -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 cursor-pointer" style="--angle: 180deg;">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ5yPOAbr-LrEa8ANO47RBo4f2txsvjPL-fw&s" alt="Postman Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Post</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 180deg;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ5yPOAbr-LrEa8ANO47RBo4f2txsvjPL-fw&s" alt="Postman Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Post</span>
                     </div>
-
+    
                     <!-- MongoDB -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 cursor-pointer" style="--angle: 210deg;">
-                        <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Mongo</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 210deg;">
+                        <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Mongo</span>
                     </div>
-
+    
                     <!-- Docker -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 cursor-pointer" style="--angle: 240deg;">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqea62MI9LsCBEPZ4WCRjBO7eKY08zYXacGg&s" alt="Docker Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Docker</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 240deg;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqea62MI9LsCBEPZ4WCRjBO7eKY08zYXacGg&s" alt="Docker Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Docker</span>
                     </div>
-
+    
                     <!-- Python -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/30 cursor-pointer" style="--angle: 270deg;">
-                        <img src="https://images.icon-icons.com/112/PNG/512/python_18894.png" alt="Python Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Python</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 270deg;">
+                        <img src="https://images.icon-icons.com/112/PNG/512/python_18894.png" alt="Python Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Python</span>
                     </div>
-
+    
                     <!-- PostgreSQL -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 cursor-pointer" style="--angle: 300deg;">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHhYIgLQICyLdxxt1uEcA4mTUM8-kNrMMMQA&s" alt="PostgreSQL Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Postgre</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 300deg;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHhYIgLQICyLdxxt1uEcA4mTUM8-kNrMMMQA&s" alt="PostgreSQL Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Postgre</span>
                     </div>
-
+    
                     <!-- Django -->
-                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 cursor-pointer" style="--angle: 330deg;">
-                        <img src="https://e7.pngegg.com/pngimages/10/113/png-clipart-django-web-development-web-framework-python-software-framework-django-text-trademark-thumbnail.png" alt="Django Logo" class="w-16 h-16 bg-white rounded p-1"/>
-                        <span class="text-xs text-white mt-1 font-medium">Django</span>
+                    <div class="tech-item absolute w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 flex flex-col items-center justify-center" style="--angle: 330deg;">
+                        <img src="https://e7.pngegg.com/pngimages/10/113/png-clipart-django-web-development-web-framework-python-software-framework-django-text-trademark-thumbnail.png" alt="Django Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium hidden sm:block">Django</span>
                     </div>
                 </div>
-
+    
                 <!-- Floating Particles -->
                 <div class="particles absolute inset-0 pointer-events-none">
                     <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-60"></div>
@@ -382,9 +388,31 @@
                     <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-20"></div>
                 </div>
             </div>
-
-            <!-- Updated CSS to accommodate bigger tech items (w-28 h-28) -->
+    
+            <!-- Updated CSS with responsive orbit radius and positioning -->
             <style>
+                :root {
+                    --orbit-radius-mobile: 150px;
+                    --orbit-radius-sm: 180px;
+                    --orbit-radius-md: 250px;
+                }
+    
+                .tech-orbit {
+                    --orbit-radius: var(--orbit-radius-mobile);
+                }
+    
+                @media (min-width: 640px) {
+                    .tech-orbit {
+                        --orbit-radius: var(--orbit-radius-sm);
+                    }
+                }
+    
+                @media (min-width: 768px) {
+                    .tech-orbit {
+                        --orbit-radius: var(--orbit-radius-md);
+                    }
+                }
+    
                 .tech-item {
                     left: 50%;
                     top: 50%;
@@ -392,14 +420,14 @@
                     transform: 
                         translate(-50%, -50%) 
                         rotate(var(--angle)) 
-                        translateX(300px) 
+                        translateX(var(--orbit-radius)) 
                         rotate(calc(-1 * var(--angle)));
                 }
-
+    
                 .particles .particle {
                     animation: float 6s ease-in-out infinite;
                 }
-
+    
                 .particles .particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
                 .particles .particle:nth-child(2) { top: 60%; left: 80%; animation-delay: 1s; }
                 .particles .particle:nth-child(3) { top: 80%; left: 20%; animation-delay: 2s; }
@@ -450,11 +478,7 @@
                 .particles .particle:nth-child(48) { top: 17%; left: 83%; animation-delay: 2.1s; }
                 .particles .particle:nth-child(49) { top: 63%; left: 7%; animation-delay: 3.1s; }
                 .particles .particle:nth-child(50) { top: 37%; left: 93%; animation-delay: 4.1s; }
-                .particles .particle:nth-child(25) { top: 12%; left: 48%; animation-delay: 0.2s; }
-
-
-                
-
+    
                 @keyframes float {
                     0%, 100% { transform: translateY(0px) scale(1); }
                     50% { transform: translateY(-20px) scale(1.2); }
@@ -462,6 +486,7 @@
             </style>
         </div>
     </section>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-6 lg:px-20">
