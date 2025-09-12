@@ -1,149 +1,651 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/home.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delshad Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+                        'slide-in-up': 'slideInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-100px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(100px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        slideInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+    
+    <!-- Fixed Navigation Dots -->
+    <div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-50">
+        <div class="relative flex flex-col items-center justify-between h-[300px]">
+            <!-- Converted nav-line to Tailwind classes -->
+            <div class="absolute w-0.5 bg-gradient-to-b from-red-500 to-red-600 top-0 bottom-0 left-1/2 transform -translate-x-1/2"></div>
+            <!-- Converted nav-dot styling to Tailwind classes with hover and active states -->
+            <div class="nav-dot w-3 h-3 rounded-full bg-red-700 cursor-pointer transition-all duration-300 hover:scale-125 hover:shadow-red-500/60 hover:shadow-lg hover:bg-red-400 relative" data-target="hero" title="Home"></div>
+            <div class="nav-dot w-3 h-3 rounded-full bg-red-700 cursor-pointer transition-all duration-300 hover:scale-125 hover:shadow-red-500/60 hover:shadow-lg hover:bg-red-400 relative" data-target="projects" title="Projects"></div>            
+            <div class="nav-dot w-3 h-3 rounded-full bg-red-700 cursor-pointer transition-all duration-300 hover:scale-125 hover:shadow-red-500/60 hover:shadow-lg hover:bg-red-400 relative" data-target="skills" title="Skills"></div>
+            <div class="nav-dot w-3 h-3 rounded-full bg-red-700 cursor-pointer transition-all duration-300 hover:scale-125 hover:shadow-red-500/60 hover:shadow-lg hover:bg-red-400 relative" data-target="contact" title="Contact"></div>
+        </div>
+    </div>
 
-    <h2>Delshad Ibrahim</h2>
-    <h3 id="full">Fullstack Developer</h3>
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center p-6 opacity-0 translate-y-12 animate-slide-in-up">
+        <div class="text-2xl font-bold">
+            Delshad<span class="text-red-500"> Ibrahim</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#hero" class="hover:text-red-400 transition-colors">About</a>
+            <a href="#projects" class="hover:text-red-400 transition-colors">Projects</a>
+            <a href="#skills" class="hover:text-red-400 transition-colors">Skills</a>
+            <a href="https://ilcodice.github.io/My_Resume/Delshad_Ibrahim_resume.pdf" class="hover:text-red-400 transition-colors">My Resume</a>
+            <a href="#contact" class="hover:text-red-400 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen bg-slate-700/20 flex flex-col lg:flex-row items-center px-6 lg:px-20 gap-6">
+    
+        <!-- Image -->
+        <div class="max-w-sm border-2 border-red-500/20 bg-slate-800/50 p-8 rounded-lg">
+            <img src="assets/images/Delo2.jpg" alt="Delshad Photo">
+        </div>
+    
+        <!-- Text -->
+        <div class="max-w-4xl opacity-0 -translate-x-24 animate-slide-in-left">
+            <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6 text-center lg:text-left">
+                Hello, I'm Delshad<br>
+                <span class="text-red-500">a Full-stack Web Developer</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-lg text-center lg:text-left">
+                I’m a Full-Stack Web Developer with experience in Python, Django, REST APIs, JavaScript, React, Next.js, NestJS, Express.js, MongoDB, and GraphQL. I love building clean, scalable applications and creating seamless user experiences.
+            </p>
+        </div>
+    </section>
+    
 
 
-    <div class="container">
-      <img src="assets/images/delo.jpg" alt="delo's photo" />
-        <div class="me">
-            <div class="my_info">
-                <h3>About Me</h3>
-                <p>
-                    I am a full-stack developer specialized in Python, Django, SQL,
-                    PostgreSQL, and RESTful APIs. <br />Currently, I am learning HTML,
-                    CSS, JavaScript, Node.js, and React.
-                </p>
+    <section id="projects" class="py-20 px-6 lg:px-20">
+        <!-- Converted slide-in-right animation to Tailwind classes -->
+        <div class="max-w-6xl opacity-0 translate-x-24 animate-slide-in-right">
+            <div class="mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold text-red-400">Projects</h2>
+                <div class="w-20 h-1 bg-red-500 mt-4"></div>
             </div>
 
-            <div class="contact">
-                <h3>Contact</h3>
-                <div class="contact_child">
-                    <div class="contact-left">
-                        <p>Mobile: 015901605307</p>
-                        <p>email: d.delshadseyda@gmail.com</p>
+            <p class="text-red-400 text-md uppercase tracking-wider mb-2">Full-stack projects</p>
+            <div class="w-[200px] h-[1px] bg-red-500 mt-4"></div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Git Version Control -->
+                <!-- Converted slide-in-left animation and card styling to Tailwind -->
+
+
+                <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 -translate-x-24 animate-slide-in-left">
+                    <div class="w-70 flex items-center justify-center mb-6">
+                        <video class="w-auto h-48 object-cover rounded-lg" controls>
+                            <source src="assets/videos/quiz_space.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 mt-6">Quiz-Space</h3>
+                    <div>
+                        <p class="text-red-400">
+                            Quiz-App is a single-player game app where users can sign up and create 10-question quizzes for others to play.
+                        </p>
+                        <br>
+                        <p class="text-gray-400"><strong class="text-red-500">Gameplay:</strong> Players earn 10 points for each correct answer.</p>
+                        <p class="text-gray-400"><strong class="text-red-500">Upcoming Features:</strong> Select a category (e.g., sports, geography, science) and difficulty (easy, medium, hard), with AI generating quizzes based on these choices.</p>
                     </div>
 
-                    <div class="contact_right">
-                        <p>Linkedin: <a href="https://www.linkedin.com/in/delshad-ibrahim-delo/" target="_blank">click me</a></p>
-                        <p>GitHub: <a href="https://github.com/ilcodice" target="_blank">click me</a></p>
+                    <div class="w-[150px] h-[1px] bg-red-500 mt-4"></div>
+
+                    <div class="mt-4">
+                        <span class="text-red-500">Tech</span>
+                        <p>Next.js, TypeScript, Tailwind CSS, MongoDB, Node.js, Express.js, JWT</p>
                     </div>
+
+                </div>
+                
+                <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 -translate-x-24 animate-slide-in-left">
+
+                    <!-- Group container -->
+
+                        <div class="relative grid grid-cols-3 gap-4">
+                            <div class="relative overflow-visible">
+                                <img src="assets/images/SPG-HomeScreen.png"
+                                     class="w-48 h-auto object-cover rounded-lg transform transition-transform duration-300 hover:scale-[3] hover:absolute hover:top-0 hover:left-0 hover:z-50 cursor-pointer">
+                            </div>
+                            <div class="relative overflow-visible">
+                                <img src="assets/images/SPG-SelectRole.png"
+                                     class="w-48 h-auto object-cover rounded-lg transform transition-transform duration-300 hover:scale-[3] hover:absolute hover:top-0 hover:left-0 hover:z-50 cursor-pointer">
+                            </div>
+                            <div class="relative overflow-visible">
+                                <img src="assets/images/SPG-About.png"
+                                     class="w-48 h-auto object-cover rounded-lg transform transition-transform duration-300 hover:scale-[3] hover:absolute hover:top-0 hover:left-0 hover:z-50 cursor-pointer">
+                            </div>
+                        </div>
+   
+                    
+                
+                    <h3 class="text-xl font-semibold mb-4 mt-6">School_Prep_Genie</h3>
+                    <div>
+                        <p class="text-red-400">
+                            School-Prep-Ginie is an all-in-one app that simplifies school communication and organization for teachers, parents, and students.
+                        </p>
+                        <br>
+                        <p class="text-gray-400"><strong class="text-red-500">Teachers:</strong> Assign homework, send notifications, and stay connected with parents.</p>
+                        <p class="text-gray-400"><strong class="text-red-500">Parents:</strong> Track homework, see required books, view the lunch menu, and get teacher updates.</p>
+                        <p class="text-gray-400"><strong class="text-red-500">Students:</strong> Manage homework, check holidays, and receive teacher notifications.</p>
+                    </div>
+                
+                    <div class="w-[150px] h-[1px] bg-red-500 mt-4"></div>
+                
+                    <div class="mt-4">
+                        <span class="text-red-500">Tech</span>
+                        <p>Django, Python, PostgreSQL, RestAPI, Swift</p>
+                    </div>
+                </div>
+                
+                
+                
+                
+
+                <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 translate-x-24 animate-slide-in-right">
+                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Medical-History</h3>
+                    <p class="text-gray-400">
+                        Family Medical History is an app that helps users track their personal medical records. It allows storing doctor appointments (with doctor details, address, and time), operations (place, cost, doctor), medications (type, dosage, schedule), and allergy information for better health management.                    </p>
+                </div>
+            </div>
+            <p class="text-red-400 mt-12 text-md uppercase tracking-wider mb-2">Backend Projects</p>
+            <div class="w-[170px] h-[1px] bg-red-500 mt-4"></div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Git Version Control -->
+                <!-- Converted slide-in-left animation and card styling to Tailwind -->
+                
+                <!-- My Read App -->
+                <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 -translate-x-24 animate-slide-in-left">
+                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2L3 7v11h4v-6h6v6h4V7l-7-5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">My-Read-App</h3>
+                    <p class="text-gray-400">
+                        My Read App is a command-line application designed to track readers and their engagement with ebooks. The database manages reader information and provides insights such as total books, books per category, reading status, and reader progress.                    </p>
+                </div>
+                <!-- Freelancing -->
+                <div class="bg-slate-800/50 p-8 rounded-lg hover:bg-slate-700/50 transition-all opacity-0 translate-x-24 animate-slide-in-right">
+                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Freelancing</h3>
+                    <p class="text-gray-400">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="delo">
-      <div class="left_edu">
-        <div class="edu">
-          <h3>Education</h3>
-          <ul>
-            <li>
-                <strong>Python Backend Course:</strong> Nov-2023 - Dec-2024
-                <p>By DCI (Digital Career Institute)</p>
-            </li>
-            <li>
-                <strong>Frontend Bootcamp:</strong> Feb-2025
-                <p>By Code Labs Academy</p>
-            </li>
-        </ul>
-        
-        </div>
 
-        <div class="tech_skills">
-          <h3>Technical Skills</h3>
-          <div class="skills_icons">
-            <div class="skills_icons_up">
-              <img src="./assets/images/Python.png" alt="python_icon" />
-              <img src="./assets/images/PostgresSQL.png"alt="postgresql_icon"/>
-              <img src="./assets/images/database.png" alt="sql-icon" />
-              <img src="./assets/images/django_rest_framework.jpg"alt="django_rest"/>
-              <img src="./assets/images/rest-api1.png" alt="rest_api_icon" />
-              <img src="./assets/images/Postman.png" alt="postman_icon" />
+    <section id="skills" class="py-20 px-6 bg-slate-700/20 lg:px-20">
+        <!-- Converted slide-in-right animation to Tailwind classes -->
+        <div class="max-w-6xl opacity-0 translate-x-24 animate-slide-in-right">
+            <div class="mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold text-red-400">Skill-Set</h2>
+                <div class="w-20 h-1 bg-red-500 mt-4"></div>
             </div>
-            <div class="skills_icons_down">
-              <img src="./assets/images/HTML5.png" alt="html_icon" />
-              <img src="./assets/images/CSS3.png" alt="css_icon" />
-              <img src="./assets/images/JavaScript.png" alt="javascript_icon" />
-              <img src="./assets/images/React.png" alt="react_icon" />
-              <img src="./assets/images/github.jpg" alt="github_icon" />
-              <img src="./assets/images/Git.png" alt="git_icon" />
+            
+            <!-- Replaced grid layout with circular tech wheel -->
+            <div class="relative flex items-center justify-center min-h-[600px]">
+                <!-- Made connecting lines more visible with brighter color and thicker stroke -->
+                <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 1;">
+                    <!-- Lines to each tech position -->
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(0deg))" y2="calc(50% + 240px * sin(0deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(30deg))" y2="calc(50% + 240px * sin(30deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(60deg))" y2="calc(50% + 240px * sin(60deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(90deg))" y2="calc(50% + 240px * sin(90deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(120deg))" y2="calc(50% + 240px * sin(120deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(150deg))" y2="calc(50% + 240px * sin(150deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(180deg))" y2="calc(50% + 240px * sin(180deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(210deg))" y2="calc(50% + 240px * sin(210deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(240deg))" y2="calc(50% + 240px * sin(240deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(270deg))" y2="calc(50% + 240px * sin(270deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(300deg))" y2="calc(50% + 240px * sin(300deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                    <line x1="50%" y1="50%" x2="calc(50% + 200px * cos(330deg))" y2="calc(50% + 240px * sin(330deg))" stroke="rgba(239, 68, 68, 0.6)" stroke-width="1"/>
+                </svg>
+
+                <!-- Central Hub -->
+                <div class="absolute z-10 w-32 h-32 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center shadow-2xl shadow-red-500/50">
+                    <div class="text-white text-center">
+                        <div class="text-2xl font-bold">Skills</div>
+                    </div>
+                </div>
+
+                <!-- Orbiting Skills Container -->
+                <div class="tech-orbit relative w-[600px] h-[600px]">
+                    <!-- Made tech items bigger (w-28 h-28) and icons much bigger (w-16 h-16) -->
+                    <!-- JavaScript -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/30 cursor-pointer" style="--angle: 0deg;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" alt="JS Logo" class="w-16 h-16 rounded"/>
+                        <span class="text-xs text-white mt-1 font-medium">JS</span>
+                    </div>
+
+                    <!-- React -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 cursor-pointer" style="--angle: 30deg;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s" alt="React Logo" class="w-16 h-16 rounded"/>
+                        <span class="text-xs text-white mt-1 font-medium">React</span>
+                    </div>
+
+                    <!-- Next.js -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/30 cursor-pointer" style="--angle: 60deg;">
+                        <img src="https://www.svgrepo.com/show/354113/nextjs-icon.svg" alt="Next.js Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Next</span>
+                    </div>
+
+                    <!-- NestJS -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/30 cursor-pointer" style="--angle: 90deg;">
+                        <img src="https://res.cloudinary.com/teepublic/image/private/s--DR_n9O6y--/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1699843204/production/designs/53097336_0.jpg" alt="NestJS Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Nest</span>
+                    </div>
+
+                    <!-- Tailwind CSS -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/30 cursor-pointer" style="--angle: 120deg;">
+                        <img src="https://www.svgrepo.com/show/374118/tailwind.svg" alt="Tailwind CSS Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Tail</span>
+                    </div>
+
+                    <!-- Express.js -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 cursor-pointer" style="--angle: 150deg;">
+                        <img src="https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png" alt="Express.js Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Expr</span>
+                    </div>
+
+                    <!-- Postman -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 cursor-pointer" style="--angle: 180deg;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ5yPOAbr-LrEa8ANO47RBo4f2txsvjPL-fw&s" alt="Postman Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Post</span>
+                    </div>
+
+                    <!-- MongoDB -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 cursor-pointer" style="--angle: 210deg;">
+                        <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Mongo</span>
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 cursor-pointer" style="--angle: 240deg;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqea62MI9LsCBEPZ4WCRjBO7eKY08zYXacGg&s" alt="Docker Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Docker</span>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/30 cursor-pointer" style="--angle: 270deg;">
+                        <img src="https://images.icon-icons.com/112/PNG/512/python_18894.png" alt="Python Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Python</span>
+                    </div>
+
+                    <!-- PostgreSQL -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 cursor-pointer" style="--angle: 300deg;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHhYIgLQICyLdxxt1uEcA4mTUM8-kNrMMMQA&s" alt="PostgreSQL Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Postgre</span>
+                    </div>
+
+                    <!-- Django -->
+                    <div class="tech-item absolute w-28 h-28 bg-slate-800/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center hover:bg-slate-700/80 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 cursor-pointer" style="--angle: 330deg;">
+                        <img src="https://e7.pngegg.com/pngimages/10/113/png-clipart-django-web-development-web-framework-python-software-framework-django-text-trademark-thumbnail.png" alt="Django Logo" class="w-16 h-16 bg-white rounded p-1"/>
+                        <span class="text-xs text-white mt-1 font-medium">Django</span>
+                    </div>
+                </div>
+
+                <!-- Floating Particles -->
+                <div class="particles absolute inset-0 pointer-events-none">
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-60"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-60"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-60"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-60"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-60"></div>
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-40"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-40"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-40"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-40"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-40"></div>
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-50"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-50"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-50"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-50"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-50"></div>
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-30"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-30"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-30"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-30"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-30"></div>
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-45"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-45"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-45"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-45"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-45"></div>
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-35"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-35"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-35"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-35"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-35"></div>
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-55"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-55"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-55"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-55"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-55"></div>
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-25"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-25"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-25"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-25"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-25"></div>
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-65"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-65"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-65"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-65"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-65"></div>
+                    <div class="particle absolute w-1 h-1 bg-red-400 rounded-full opacity-20"></div>
+                    <div class="particle absolute w-1 h-1 bg-blue-400 rounded-full opacity-20"></div>
+                    <div class="particle absolute w-1 h-1 bg-green-400 rounded-full opacity-20"></div>
+                    <div class="particle absolute w-1 h-1 bg-yellow-400 rounded-full opacity-20"></div>
+                    <div class="particle absolute w-1 h-1 bg-purple-400 rounded-full opacity-20"></div>
+                </div>
+            </div>
+
+            <!-- Updated CSS to accommodate bigger tech items (w-28 h-28) -->
+            <style>
+                .tech-item {
+                    left: 50%;
+                    top: 50%;
+                    transform-origin: 0 0;
+                    transform: 
+                        translate(-50%, -50%) 
+                        rotate(var(--angle)) 
+                        translateX(300px) 
+                        rotate(calc(-1 * var(--angle)));
+                }
+
+                .particles .particle {
+                    animation: float 6s ease-in-out infinite;
+                }
+
+                .particles .particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+                .particles .particle:nth-child(2) { top: 60%; left: 80%; animation-delay: 1s; }
+                .particles .particle:nth-child(3) { top: 80%; left: 20%; animation-delay: 2s; }
+                .particles .particle:nth-child(4) { top: 30%; left: 70%; animation-delay: 3s; }
+                .particles .particle:nth-child(5) { top: 70%; left: 40%; animation-delay: 4s; }
+                .particles .particle:nth-child(6) { top: 15%; left: 85%; animation-delay: 0.5s; }
+                .particles .particle:nth-child(7) { top: 45%; left: 15%; animation-delay: 1.5s; }
+                .particles .particle:nth-child(8) { top: 75%; left: 65%; animation-delay: 2.5s; }
+                .particles .particle:nth-child(9) { top: 25%; left: 45%; animation-delay: 3.5s; }
+                .particles .particle:nth-child(10) { top: 85%; left: 25%; animation-delay: 4.5s; }
+                .particles .particle:nth-child(11) { top: 35%; left: 75%; animation-delay: 0.2s; }
+                .particles .particle:nth-child(12) { top: 65%; left: 35%; animation-delay: 1.2s; }
+                .particles .particle:nth-child(13) { top: 55%; left: 55%; animation-delay: 2.2s; }
+                .particles .particle:nth-child(14) { top: 95%; left: 5%; animation-delay: 3.2s; }
+                .particles .particle:nth-child(15) { top: 5%; left: 95%; animation-delay: 4.2s; }
+                .particles .particle:nth-child(16) { top: 40%; left: 60%; animation-delay: 0.8s; }
+                .particles .particle:nth-child(17) { top: 90%; left: 50%; animation-delay: 1.8s; }
+                .particles .particle:nth-child(18) { top: 10%; left: 30%; animation-delay: 2.8s; }
+                .particles .particle:nth-child(19) { top: 50%; left: 90%; animation-delay: 3.8s; }
+                .particles .particle:nth-child(20) { top: 70%; left: 10%; animation-delay: 4.8s; }
+                .particles .particle:nth-child(21) { top: 22%; left: 88%; animation-delay: 0.3s; }
+                .particles .particle:nth-child(22) { top: 78%; left: 22%; animation-delay: 1.3s; }
+                .particles .particle:nth-child(23) { top: 33%; left: 67%; animation-delay: 2.3s; }
+                .particles .particle:nth-child(24) { top: 67%; left: 33%; animation-delay: 3.3s; }
+                .particles .particle:nth-child(25) { top: 44%; left: 56%; animation-delay: 4.3s; }
+                .particles .particle:nth-child(26) { top: 56%; left: 44%; animation-delay: 0.6s; }
+                .particles .particle:nth-child(27) { top: 11%; left: 89%; animation-delay: 1.6s; }
+                .particles .particle:nth-child(28) { top: 89%; left: 11%; animation-delay: 2.6s; }
+                .particles .particle:nth-child(29) { top: 77%; left: 77%; animation-delay: 3.6s; }
+                .particles .particle:nth-child(30) { top: 23%; left: 23%; animation-delay: 4.6s; }
+                .particles .particle:nth-child(31) { top: 38%; left: 82%; animation-delay: 0.4s; }
+                .particles .particle:nth-child(32) { top: 82%; left: 38%; animation-delay: 1.4s; }
+                .particles .particle:nth-child(33) { top: 27%; left: 73%; animation-delay: 2.4s; }
+                .particles .particle:nth-child(34) { top: 73%; left: 27%; animation-delay: 3.4s; }
+                .particles .particle:nth-child(35) { top: 62%; left: 18%; animation-delay: 4.4s; }
+                .particles .particle:nth-child(36) { top: 18%; left: 62%; animation-delay: 0.7s; }
+                .particles .particle:nth-child(37) { top: 92%; left: 42%; animation-delay: 1.7s; }
+                .particles .particle:nth-child(38) { top: 8%; left: 58%; animation-delay: 2.7s; }
+                .particles .particle:nth-child(39) { top: 48%; left: 8%; animation-delay: 3.7s; }
+                .particles .particle:nth-child(40) { top: 52%; left: 92%; animation-delay: 4.7s; }
+                .particles .particle:nth-child(41) { top: 14%; left: 36%; animation-delay: 0.9s; }
+                .particles .particle:nth-child(42) { top: 86%; left: 64%; animation-delay: 1.9s; }
+                .particles .particle:nth-child(43) { top: 41%; left: 14%; animation-delay: 2.9s; }
+                .particles .particle:nth-child(44) { top: 59%; left: 86%; animation-delay: 3.9s; }
+                .particles .particle:nth-child(45) { top: 74%; left: 59%; animation-delay: 4.9s; }
+                .particles .particle:nth-child(46) { top: 26%; left: 41%; animation-delay: 0.1s; }
+                .particles .particle:nth-child(47) { top: 83%; left: 17%; animation-delay: 1.1s; }
+                .particles .particle:nth-child(48) { top: 17%; left: 83%; animation-delay: 2.1s; }
+                .particles .particle:nth-child(49) { top: 63%; left: 7%; animation-delay: 3.1s; }
+                .particles .particle:nth-child(50) { top: 37%; left: 93%; animation-delay: 4.1s; }
+                .particles .particle:nth-child(25) { top: 12%; left: 48%; animation-delay: 0.2s; }
+
+
+                
+
+                @keyframes float {
+                    0%, 100% { transform: translateY(0px) scale(1); }
+                    50% { transform: translateY(-20px) scale(1.2); }
+                }
+            </style>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 lg:px-20">
+        <!-- Converted slide-in-left animation to Tailwind -->
+        <div class="max-w-4xl opacity-0 -translate-x-24 animate-slide-in-left">
+          <div class="flex items-center gap-6 mb-12">
+            <!-- Interactive Face positioned next to title -->
+            <h2 class="text-4xl lg:text-5xl font-bold text-red-400">Connect with me</h2>
+            <div class="flex-shrink-0">
+
             </div>
           </div>
+      
+          <!-- Contact Icons Grid -->
+          <div class="grid grid-cols-2 gap-6 md:grid-cols-4 gap-4 max-w-8xl">
+            <!-- Phone -->
+            <div class="group relative">
+                <a href="tel:015901605307" target="_blank" rel="noopener noreferrer">
+                    <div class="transform-gpu transition-transform duration-300 ease-out group-hover:scale-105">
+                        <div class="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl transition-colors duration-300 cursor-pointer group-hover:bg-slate-700/50 group-hover:shadow-lg group-hover:shadow-red-500/30">
+                            <div class="flex space-x-4">
+                                <!-- GitHub -->
+                                <div class="flex items-center justify-center w-16 h-16 text-white bg-red-600 rounded-full text-3xl">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                            </div>
+                            <span class="mt-4 hover:text-xl duration-300">015901605307</span>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+      
+            <!-- Email -->
+            
+            <div class="group relative">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=d.delshadseyda@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <div class="transform-gpu transition-transform duration-300 ease-out group-hover:scale-105">
+                        <div class="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl transition-colors duration-300 cursor-pointer group-hover:bg-slate-700/50 group-hover:shadow-lg group-hover:shadow-red-500/30">
+                            <div class="flex space-x-4">
+                                <!-- GitHub -->
+                                <div class="flex items-center justify-center w-16 h-16 text-white bg-red-600 rounded-full text-3xl">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                            </div>          
+                            <span class="mt-4 hover:text-xl duration-300">Gmail</span>
+                        </div>
+                    </div>
+                </a>
+            </div>  
+            
+            <!-- LinkedIn -->
+            <div class="group relative">
+                <a href="https://www.linkedin.com/in/delshad-ibrahim-delo" target="_blank" rel="noopener noreferrer">
+                    <div class="transform-gpu transition-transform duration-300 ease-out group-hover:scale-105">
+                        <div class="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl transition-colors duration-300 cursor-pointer group-hover:bg-slate-700/50 group-hover:shadow-lg group-hover:shadow-red-500/30">
+                            <div class="flex space-x-4">
+                                <!-- GitHub -->
+                                <div class="flex items-center justify-center w-16 h-16 text-white bg-red-600 rounded-full text-3xl">
+                                    <i class="fa fa-linkedin"></i>
+                                </div>
+                            </div>          
+                            <span class="mt-4 hover:text-xl duration-300">LinkedIn</span>
+                        </div>
+                    </div>
+                </a>
+            </div>  
+      
+            <!-- GitHub -->
+            <div class="group relative">
+                <a href="https://github.com/ilcodice" target="_blank" rel="noopener noreferrer">
+                    <div class="transform-gpu transition-transform duration-300 ease-out group-hover:scale-105">
+                        <div class="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl transition-colors duration-300 cursor-pointer group-hover:bg-slate-700/50 group-hover:shadow-lg group-hover:shadow-red-500/30">
+                            <div class="flex space-x-4">
+                                <!-- GitHub -->
+                                <div class="flex items-center justify-center w-16 h-16 text-white bg-red-600 rounded-full text-3xl">
+                                    <i class="fa fa-github"></i>
+                                </div>
+                            </div>          
+                            <span class="mt-4 hover:text-xl duration-300">GitHub</span>
+                        </div>
+                    </div>
+                </a>
+            </div>                
+          <!-- Added creative call-to-action message -->
         </div>
-      </div>
 
-      <div class="right_edu">
-
-        <div class="soft_skills">
-          <h3>Soft skills</h3>
-          <ul>
-            <li id="soft_skills_elements">Scrum Master</li> <!-- give this id so i can give padding-bottom-->
-            <li id="soft_skills_elements">Teamwork</li>
-            <li id="soft_skills_elements">Problem-solving</li>
-            <li id="soft_skills_elements">Communication</li>
-            <li id="soft_skills_elements">Adaptability</li>
-            <li id="soft_skills_elements">Time management</li>
-          </ul>
-
-        </div>
-
-        <div class="lang">
-          <h3>Languages</h3>
-          <ul>
-            <li id="lang_element">German</li>
-            <li id="lang_element">English</li>
-            <li id="lang_element">Kurdish</li>
-            <li id="lang_element">Arabic</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="last_section">
-
-        <h3 id="projects">Projects</h3>
-        <div class="projects">
-            <div class="pro1">
-                <h4 id="project_heading">Amazon Simulation</h4>
-                <p>A small project built with Python, where users can
-                register, log in, and make purchases.</p>
+        <div class="mt-12 text-center">
+            <p class="text-xl text-gray-300 mb-6">Let's build something amazing together!</p>
+            <div class="flex items-center justify-center space-x-2">
+              <div class="w-12 h-0.5 bg-red-500"></div>
+              <span class="text-red-400 font-medium">Ready to connect</span>
+              <div class="w-12 h-0.5 bg-red-500"></div>
             </div>
+          </div>
+      </section>
+      
 
-            <div class="pro2">
-                <h4 id="project_heading">Family Disease History</h4>
-                <p>
-                A project developed with Django that allows
-                users to save their health history, record doctor appointments, track
-                medications, view disease history, surgeries, and allergies. Users can
-                also upload documents such as blood test results and store them
-                securely.
-                </p>
-            </div>
+    <script>
+        // Smooth scroll functionality for navigation dots
+        document.querySelectorAll('.nav-dot').forEach(dot => {
+            dot.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Update active dot - converted to Tailwind classes
+                document.querySelectorAll('.nav-dot').forEach(d => {
+                    d.classList.remove('bg-red-600', 'scale-110');
+                    d.classList.add('bg-red-500');
+                });
+                this.classList.remove('bg-red-500');
+                this.classList.add('bg-red-600', 'scale-110');
+            });
+        });
 
-            <div class="pro3">
-                <h4 id="project_heading">School Prep Genie</h4>
-                <p>
-                A project developed by a team of five: two
-                frontend developers, two backend developers, and one Scrum Master. I
-                worked as a backend developer. This project is designed for children
-                and parents to track school activities. Teachers can upload homework,
-                make announcements, contact parents, update the daily lunch menu, and
-                manage the school calendar. Parents can communicate directly with
-                teachers, check the lunch menu, and view holiday schedules.
-                </p>
-            </div>
-        </div>
-    </div>
+        // Scroll animation observer - triggers Tailwind animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-  </body>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Remove initial opacity and transform, let Tailwind animations take over
+                    entry.target.classList.remove('opacity-0', '-translate-x-24', 'translate-x-24', 'translate-y-12');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('[class*="animate-slide-in"]').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Update active navigation dot based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = ['hero','projects' ,'skills', 'contact'];
+            const scrollPos = window.scrollY + 100;
+            
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        document.querySelectorAll('.nav-dot').forEach(dot => {
+                            dot.classList.remove('bg-red-600', 'scale-110');
+                            dot.classList.add('bg-red-500');
+                            if (dot.getAttribute('data-target') === sectionId) {
+                                dot.classList.remove('bg-red-500');
+                                dot.classList.add('bg-red-600', 'scale-110');
+                            }
+                        });
+                    }
+                }
+            });
+        });
+
+        // Initialize first dot as active
+        const firstDot = document.querySelector('.nav-dot[data-target="hero"]');
+        firstDot.classList.remove('bg-red-500');
+        firstDot.classList.add('bg-red-600', 'scale-110');
+
+        // Tech item click effects
+        document.querySelectorAll('.tech-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // Create ripple effect
+                const ripple = document.createElement('div');
+                ripple.className = 'absolute inset-0 bg-white/20 rounded-xl animate-ping';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+    </script>
+</body>
 </html>
