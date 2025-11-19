@@ -77,7 +77,8 @@
 <body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
     
     <!-- Fixed Navigation Dots -->
-    <div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-50">
+    <div class="hidden md:block fixed right-8 top-1/2 transform -translate-y-1/2 z-20">
+
         <div class="relative flex flex-col items-center justify-between h-[300px]">
             <!-- Converted nav-line to Tailwind classes -->
             <div class="absolute w-0.5 bg-gradient-to-b from-red-500 to-red-600 top-0 bottom-0 left-1/2 transform -translate-x-1/2"></div>
@@ -90,22 +91,48 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="flex justify-between items-center p-6 opacity-0 translate-y-12 animate-slide-in-up">
+    <nav class="relative flex justify-between bg-slate-900 items-center p-6 lg:px-20">
+
         <div class="text-2xl font-bold">
             Delshad<span class="text-red-500"> Ibrahim</span>
         </div>
-        <div class="hidden md:flex space-x-8">
-            <a href="#hero" class="hover:text-red-400 transition-colors">About</a>
-            <a href="#projects" class="hover:text-red-400 transition-colors">Projects</a>
-            <a href="#skills" class="hover:text-red-400 transition-colors">Skills</a>
-            <a href="https://ilcodice.github.io/My_Resume/Delshad_Ibrahim_Resume.pdf" class="hover:text-red-400 transition-colors">My Resume</a>
-            <a href="#contact" class="hover:text-red-400 transition-colors">Contact</a>
-        </div>
-    </nav>
+    
+  <!-- Menu button for mobile -->
+  <button id="menuBtn" class="md:hidden px-4 py-2 rounded bg-red-600 hover:bg-red-500 transition">
+    <i class="fa fa-bars "></i>
+  </button>
+
+  <!-- Desktop menu -->
+  <div class="hidden md:flex space-x-6">
+    <a href="#about" class="hover:text-red-400 transition">About</a>
+    <a href="#projects" class="hover:text-red-400 transition">Projects</a>
+    <a href="resume.pdf" class="hover:text-red-400 transition">My Resume</a>
+  </div>
+
+  <!-- Mobile menu -->
+ <!-- Mobile Dropdown (replace existing #mobileMenu) -->
+<!-- Keep it inside the <nav> if you want it positioned relative to nav -->
+<div id="mobileMenu"
+class="hidden absolute top-full right-6 w-40 h-52 bg-slate-900 bg-opacity-95 border border-white/20 shadow-lg shadow-red-700/10 rounded-lg p-2 flex flex-col space-y-2 md:hidden z-50"
+style="pointer-events:auto;">
+<a href="#hero" class="block px-3 rounded text-sm hover:bg-red-600 hover:text-white transition-colors ">About</a>
+<hr class="border-t border-red-400/50 w-24 ml-3">
+<a href="#projects" class="block px-3 rounded text-sm hover:bg-red-600 hover:text-white transition-colors">Projects</a>
+<hr class="border-t border-red-400/50 w-24 ml-3">
+<a href="#skills" class="block px-3 rounded text-sm hover:bg-red-600 hover:text-white transition-colors">Skills</a>
+<hr class="border-t border-red-400/50 w-24 ml-3">
+<a href="https://ilcodice.github.io/My_Resume/Delshad_Ibrahim_Resume.pdf" target="_blank" rel="noopener noreferrer" class="block px-3 rounded text-sm hover:bg-red-600 hover:text-white transition-colors">My Resume</a>
+<hr class="border-t border-red-400/50 w-24 ml-3">
+<a href="#contact" class="block px-3 pb-1 rounded text-sm hover:bg-red-600 hover:text-white transition-colors">Contact</a>
+<hr class="border-t border-red-400/50 w-24 ml-3">
+</div>
+
+</nav>
+    
 
     <!-- Hero Section -->
     <section id="hero" class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center px-6 lg:px-20">
-        <div class="max-w-7xl mx-auto w-full">
+        <div class="max-w-7xl mx-auto w-full mt-40">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Text Content -->
                 <div class="space-y-6 opacity-0 animate-fade-in-right">
@@ -146,14 +173,6 @@
                         </a>
                     </div>
                     
-                    <!-- Tech Stack Preview -->
-                    <!-- <div class="flex flex-wrap gap-2 pt-6 opacity-0 animate-fade-in-up animate-delay-2">
-                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Python</span>
-                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">React</span>
-                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Next.js</span>
-                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Django</span>
-                        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">MongoDB</span>
-                    </div> -->
                 </div>
                 
                 <!-- Image -->
@@ -170,28 +189,9 @@
                                 alt="Delshad Photo"
                             >
                         </div>
-                        
-                        <!-- Floating elements -->
-
-                        <!-- <div class="absolute -top-4 -right-4 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
-                            <span class="text-white font-bold">JS</span>
-                        </div>
-                        <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;">
-                            <span class="text-white font-bold">PY</span>
-                        </div> -->
                     </div>
                 </div>
             </div>
-            
-            <!-- Scroll indicator -->
-            <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in-up animate-delay-2">
-                <div class="flex flex-col items-center text-gray-400">
-                    <span class="text-sm mb-2">Scroll to explore</span>
-                    <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
-                        <div class="w-1 h-3 bg-red-500 rounded-full mt-2 animate-bounce"></div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
 
@@ -718,7 +718,8 @@
       </section>
       
 
-    <script>
+
+      <script>
         // Smooth scroll functionality for navigation dots
         document.querySelectorAll('.nav-dot').forEach(dot => {
             dot.addEventListener('click', function() {
@@ -786,33 +787,34 @@
         });
 
 
-                // Add smooth scrolling and interaction effects
-                document.addEventListener('DOMContentLoaded', function() {
-            // Trigger animations on load
-            const animatedElements = document.querySelectorAll('[class*="animate-"]');
-            animatedElements.forEach(el => {
-                el.style.opacity = '0';
-            });
-            
-            // Start animations after a brief delay
-            setTimeout(() => {
-                animatedElements.forEach(el => {
-                    el.style.opacity = '1';
-                });
-            }, 100);
-            
-            // Add hover effects to buttons
-            const buttons = document.querySelectorAll('button');
-            buttons.forEach(button => {
-                button.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-2px)';
-                });
-                
-                button.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+    // Trigger animations on load
+    const animatedElements = document.querySelectorAll('section [class*="animate-"]');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+    });
+    
+    // Start animations after a brief delay
+    setTimeout(() => {
+        animatedElements.forEach(el => {
+            el.style.opacity = '1';
         });
+    }, 100);
+
+    // Add hover effects to buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});
+
+       
 
         const firstDot = document.querySelector('.nav-dot[data-target="hero"]');
         firstDot.classList.remove('bg-red-700');
@@ -831,6 +833,47 @@
                 }, 600);
             });
         });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const menuButton = document.getElementById("menuBtn"); // <— FIXED ID
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            if (!menuButton || !mobileMenu) {
+                console.warn("Menu button or mobile menu not found.");
+                return;
+}
+
+            // Toggle menu
+            menuButton.addEventListener("click", (e) => {
+                e.stopPropagation();
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!mobileMenu.classList.contains("hidden") &&
+                    !mobileMenu.contains(e.target) &&
+                    e.target !== menuButton) {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+
+             // ✅ Close menu when clicking a link inside it
+             mobileMenu.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                });
+            });
+
+            // Close with ESC key
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+
+});
     </script>
 </body>
 </html>
